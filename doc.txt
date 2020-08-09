@@ -1,0 +1,6 @@
+napravit site: https://www.figma.com/file/fbn7Qa4Pzhg4RYSGv3dPkI/WEEE4Future?node-id=218%3A141
+dizajn cijeli
+-radit po blokovima:
+-svaki block posebno u mapu blokovi i sve includat s phpom
+
+-svaki block ide u svoj section 
