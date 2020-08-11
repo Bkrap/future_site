@@ -1,9 +1,15 @@
 $color_green: #4CBF34;
-$global_bg: #E5E5E5;
+$global_green: #E5E5E4;
+$light_green: #E5E5E5;
+$light_blue: #73C4EE;
 
 *{
   padding: 0;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Navigation */
@@ -13,7 +19,7 @@ header{
   background: linear-gradient(90.15deg, #4CBF34 23.5%, #73C4EE 73.62%);
 
   container{
-    max-width: 1196px;
+    max-width: 1440px;
     margin: auto;
     width: 100%;
     height: 57px;
@@ -65,12 +71,108 @@ header{
   }
 }
 
+.default_section{
+    width:100%;
+    max-width: 1196px;
+    display:block;
+    height:500px;
+    max-height:500px;
+    margin:50px auto 50px auto;
+}
+
+// HOME PAGE SECTION 1
+
+.hero{
+width:100%;
+background-color: #E9E4E4; // placeholder for image
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height:100%;
+border-top-left-radius: 70px;
+border-bottom-right-radius: 59px;
+
+p{
+    font-family: Roboto;  //Roboto is not websafe, gotta download
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140.62%; /* or 25px */
+    text-align: center;
+}
+
+}
+
+.gradient_title{
+font-size: 50px;
+color: rgba(0,0,0,0);
+margin-bottom:19px;
+font-family: Post No Bills Colombo; // https://www.cufonfonts.com/font/post-no-bills-colombo for font download
+font-weight: bold;
+line-height: 75px;
+background: linear-gradient(90deg, $color_green 23.5%, $light_blue 73.62%);
+-webkit-text-fill-color:transparent;
+background-clip: text;
+-webkit-background-clip:text;
+text-align: center;
+}
+
+    // HOME PAGE SECTION 2
+
+.flex_section{
+display:flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+.e_waste_recycle{
+    width:100%;
+    max-width:950px;
+    min-height:200px;
+}
+
+.icons{
+    width:85%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto 50px auto;
+}
+
+.icon_wrap{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px;
+}
+
+.text{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    p{
+        text-align: center;
+        font-size:18px;
+        line-height: 140.62%;
+        font-family:Robot;
+    }
+
+    span{
+        font-weight: bold;
+    }
+}
+}
+
 /* Left grid e-calculator */
 .sec_left{
 
-  float:left;
   margin-top: 100px;
-  margin-left: -126px;
 
   p{
     width: 467px;
@@ -100,19 +202,21 @@ header{
 }
 
 /* Right grid grey picture */
-.sec_right{
+.sec_right_rectangle{
 
-  float: left;
-  margin-top: 100px;
-  margin-right: 122px;
+    margin-top: 100px;
+    margin-left: 75px;
+    background-color: #E9E4E4;
+    width: 650px;
+    height: 380px;
+    border-radius: 70px 0px 59px 0px;
+
 }
 
 /* Right grid learn */
 #sec_right_learn{
 
-  float: left;
   margin-top: 100px;
-  margin-right: -133px;
 
   p{
     font-family: sans-serif;
@@ -141,6 +245,20 @@ header{
   }
 }
 
+.sec_left_rectangle{
+
+
+    margin-top: 100px;
+    margin-right: 75px;
+    background-color: #E9E4E4;
+    width: 650px;
+    height: 380px;
+    border-radius: 70px 0px 59px 0px;
+
+}
+
+/* Map layout */
+
 .map_intro{
 
   display: flex;
@@ -156,9 +274,19 @@ header{
     justify-content: center;
     text-align-last: center;
   }
-
-
 }
+
+ .map_search{
+   position:absolute;
+
+
+   #google_map_search{
+     width: 483px;
+     height: 48px;
+   }
+ }
+
+
 
 #googleMap{
 
@@ -168,4 +296,431 @@ header{
   align-items: center;
   margin-bottom: 177px;
   border-radius: 26px;
+
 }
+
+footer{
+    width:100%;
+    min-height: 260px;
+    background:linear-gradient(90deg, $color_green 33.5%, $light_blue 73.62%);
+
+    .container{
+        width:100%;
+        max-width: 1196px;
+        margin:auto;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top:50px;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        max-height:160px;
+        margin-left: 25px;
+        margin-bottom: 40px;
+
+        #raw_materials{
+            margin-bottom:20px;
+            max-width:270px;
+        }
+
+        #eu_flag{
+            max-width: 260px;
+        }
+    }
+
+    h3{
+        color:white;
+        font-family: roboto;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 30px;
+    }
+
+    .right_wrap{
+        width:470px;
+        min-width: 350px;
+        max-width: 470px;
+        height: 160px;
+        max-height: 160px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 25px;
+    }
+
+    ul{
+        padding:0;
+        list-style-type: none;
+    }
+
+    li{
+        color:white;
+        margin-bottom:16px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        opacity:0.75;
+        font-size:20px;
+        line-height: 23px;
+    }
+
+    .icon_row{
+        max-width:200px;
+        width:200px;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top:20px;
+    }
+}
+
+/* ----> Responsive ----*/
+
+@media only screen and (min-device-width:360px){
+
+    .default_section{
+        min-height: 375px;
+        height:375px;
+    }
+
+
+    #waste_section{
+        height:470px;
+    }
+
+    .gradient_title{
+        font-size:35px;
+        line-height: 52px;
+    }
+
+    .hero p span{
+        display:none;
+    }
+
+    .icons{
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+    }
+
+    .icons_text_phone{
+        display:block;
+        margin-top:20px;
+        text-align: center;
+        font-size:18px;
+        line-height: 140.62%;
+        font-family:Robot;
+        max-height: 75px;
+
+        span{
+            font-weight: bold;
+        }
+    }
+
+    .icons_arrow{
+        display:none;
+    }
+
+    .e_waste_recycle{
+        min-height:450px;
+    }
+
+
+    .e_waste_recycle .text{
+        display:none;
+    }
+
+
+    // FOOTER
+
+    footer{
+
+        .container{
+            min-height:220px;
+        }
+
+        .left{
+            max-height: 220px;
+            height:300px;
+            width:100%;
+            max-width: 500px;
+        }
+    }
+
+    #footer_right_content{
+        display:none;
+    }
+
+    #raw_materials{
+        max-width: 275px;
+    }
+
+    #eu_flag{
+        width:500px;
+        max-width:380px;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-device-width:768px){
+
+  .nav-bar{
+    width: 100%;
+    .nav-logo{
+      margin-left: -100px;
+    }
+    .p1{
+      display: none;
+    }
+    .p2{
+      display: none;
+    }
+    .p3{
+      display: none;
+    }
+  }
+
+  .sec_left_rectangle{
+    display:flex;
+    flex-direction: column;
+  }
+
+    footer{
+
+        .container{
+
+            box-sizing: border-box;
+        }
+
+    }
+
+    .default_section{
+
+        min-height: 450px;
+        height:450px;
+    }
+
+    #waste_section{
+        height:470px;
+    }
+
+    .hero p span{
+        display:block;
+    }
+
+    .icons{
+        flex-wrap: wrap;
+    }
+
+    .icons_text_phone{
+        display:block;
+    }
+
+    .icons_arrow{
+        display:none;
+    }
+
+    .e_waste_recycle{
+        min-height:450px;
+    }
+
+    .e_waste_recycle .text{
+        display:none;
+    }
+
+
+
+    // FOOTER
+
+    #footer_right_content{
+        display:none;
+    }
+
+    #eu_flag{
+        max-width:257px;
+        align-self: flex-start;
+    }
+}
+
+@media only screen and (min-device-width:1200px){
+
+    .default_section{
+        width: 100%;
+        min-height: 500px;
+        height:500px;
+    }
+
+    .nav-bar{
+      display: block;
+    }
+
+    #waste_section{
+        height:500px;
+    }
+
+    .hero p span{
+        display:block;
+    }
+
+    .icons{
+        flex-wrap: initial;
+    }
+
+    .icons_text_phone{
+        display:none;
+    }
+
+    .icons_arrow{
+        display:block;
+    }
+
+    .e_waste_recycle .text{
+        display:flex;
+    }
+
+
+    // FOOTER
+
+    #footer_right_content{
+        display:flex;
+    }
+
+    #eu_flag{
+        max-width:257px;
+    }
+}
+
+ .circles{
+   margin-top: 50px;
+   margin-bottom: 50px;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: space-between;
+   min-width: 450px; /* Radi udaljenost kružića jedan između drugog */
+
+ }
+
+ #text_calc {
+   margin-top: 50px;
+   text-align: center;
+   max-width: 516px;
+   max-height: 82px;
+ }
+
+ /* Calculator 1/4 */
+
+ .icon_single{
+   margin-top: 50px;
+   margin-bottom: 110px;
+ }
+
+ .btn_next_step{
+   width: 133px;
+   height: 34px;
+   background-color: white;
+   color: $color_green;
+   border-bottom-left-radius: 20px;
+   border-top-right-radius: 20px;
+   border-width: medium;
+   border: 2px solid $color_green;
+   text-align-last: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 110px;
+ }
+
+ /* Calculator 3/4 */
+
+ .icons_container{
+   margin-top: 39px;
+   margin-bottom: 71px;
+   display: flex;
+   flex-wrap: nowrap; /* ? */
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   min-width: 350px;
+ }
+
+ .icon_calculator_box{
+   display: flex;
+   flex-wrap: wrap;
+   width: 165px;
+   height: 228px;
+   background-color: white;
+   box-shadow: 10px 10px 20px rgba(199, 199, 199, 0.26);
+   border-radius: 12px;
+
+ /* Right box */
+
+   #icon_calculator_color_right_top{
+     width:165px;
+     height:42px;
+     align-self: flex-start;
+     background-color: rgba(224, 255, 35, 0.31);
+     border-top-left-radius: 12px;
+     border-top-right-radius: 12px;
+     text-align: center;
+
+   }
+
+   .boxes_icon{
+     margin-left: 50px;
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+     align-self: center;
+   }
+
+   #icon_calculator_color_right_down{
+     width:165px;
+     height:42px;
+     align-self: flex-end;
+     background-color: rgba(224, 255, 35, 0.31);
+     border-bottom-left-radius: 12px;
+     border-bottom-right-radius: 12px;
+     text-align: center;
+
+   }
+
+   /* Left box */
+
+   #icon_calculator_color_left_top{
+     width:165px;
+     height:42px;
+     align-self: flex-start;
+     background-color: #80DCFF;
+     border-top-left-radius: 12px;
+     border-top-right-radius: 12px;
+     text-align: center;
+
+   }
+
+   #icon_calculator_color_left_down{
+     width:165px;
+     height:42px;
+     align-self: flex-end;
+     background-color: #80DCFF;
+     border-bottom-left-radius: 12px;
+     border-bottom-right-radius: 12px;
+     text-align: center;
+
+   }
+
+   .small_icon_button{
+     width: 100px;
+     height: 100px;
+     background-color: #80DCFF;
+   }
+
+ }
+
+
+ /* Google map marker */
+  .gm-style-pbc{
+    display: none;
+  }
