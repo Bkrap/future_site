@@ -1,45 +1,41 @@
-<?php
-include_once('veza.php');
 
-$sql = "SELECT * FROM grad WHERE adresa = 'Ulica grada Dubrovnika'";
-$upit = $veza->query($sql);
-while($red = $upit->fetch_assoc()){
-
-  $lat = $red['lat'];
-  $lng = $red['lng'];
-}
-?>
 <div id="googleMap" style="width:1196px;height:500px;">
   <script>
   function myMap(){
-    var ulDub = {lat: <?php echo $lat; ?>, lng: <?php echo $lng; ?>};
+    var ulDub = {lat: 45.4999313, lng: 16.3551708}; //vrati koordinate na ulicu grada duborvnika
     var ulVuk = {lat: 45.4999314, lng: 16.3551708};
     var ulMar = {lat: 45.5074345, lng: 16.3761173};
     var ulBer = {lat: 45.4992764, lng: 16.3649263};
 
     var map = new google.maps.Map(document.getElementById('googleMap'), {
-      zoom: 14,
-      center: ulVuk
+      zoom: 15,
+      center: ulDub
     });
+
+    var greenIcon = 'pic/marker.png';
 
     var marker = new google.maps.Marker({
       position: ulDub,
-      map: map
+      map: map,
+      icon: greenIcon
     });
 
     var marker = new google.maps.Marker({
       position: ulVuk,
-      map: map
+      map: map,
+      icon: greenIcon
     });
 
     var marker = new google.maps.Marker({
       position: ulMar,
-      map: map
+      map: map,
+      icon: greenIcon
     });
 
     var marker = new google.maps.Marker({
       position: ulBer,
-      map: map
+      map: map,
+      icon: greenIcon
     });
   }
   </script>

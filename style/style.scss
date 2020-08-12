@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+button:focus{
+  outline: none;
+}
+
 /* Navigation */
 header{
   width: 100%;
@@ -276,15 +280,13 @@ align-items: center;
   }
 }
 
+
+
  .map_search{
-   position:absolute;
-
-
-   #google_map_search{
-     width: 483px;
-     height: 48px;
-   }
+   position: absolute;
+   z-index: 1;
  }
+
 
 
 
@@ -294,12 +296,12 @@ align-items: center;
   flex-direction: column;
   flex:auto;
   align-items: center;
-  margin-bottom: 177px;
   border-radius: 26px;
 
 }
 
 footer{
+    margin-top: 110px;
     width:100%;
     min-height: 260px;
     background:linear-gradient(90deg, $color_green 33.5%, $light_blue 73.62%);
@@ -630,7 +632,6 @@ footer{
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-bottom: 110px;
  }
 
  /* Calculator 3/4 */
