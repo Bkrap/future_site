@@ -1,3 +1,4 @@
+<?php include 'includes/include-class.inc.php'; ?>
 <?php include_once('head.php'); ?>
 <body>
   <?php include_once('blocks/header.php'); ?>

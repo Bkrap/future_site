@@ -10,6 +10,7 @@ class Veza{
                echo 'Neuspješna veza ' . mysqli_connect_error($this->veza);
           }
      }
+
      public function insert($table_name, $data)
      {
           $string = "INSERT INTO ".$table_name." (";
@@ -25,9 +26,5 @@ class Veza{
           }
      }
 
-     public function select($table)
-     {
-       $string = "SELECT * FROM ".$table" ";
-     }
 }
 ?>

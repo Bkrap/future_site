@@ -3,9 +3,9 @@ require 'veza.php';
 include_once('blocks/home/map-e-waste.php');
 
 class Map{
-  public $lat;
-  public $lng;
-  public $desc;
+  private $lat;
+  private $lng;
+  private $desc;
 
   public function __construct($lat, $lng, $coo_desc){
     $this->lat = $lat;
@@ -13,15 +13,15 @@ class Map{
     $this->coo_desc = $coo_desc;
  }
 
-  public function getLat(){
+  public function getLat($lat){
     return $this->lat;
   }
 
-  public function getLng(){
+  public function getLng($lng){
     return $this->lng;
   }
 
-  public function getDesc(){
+  public function getDesc($coo_desc){
     return $this->coo_desc;
   }
 }
